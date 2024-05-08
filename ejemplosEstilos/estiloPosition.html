@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        .container {
+            background-color: rgb(206, 152, 102);
+            border: 3px solid black;
+        }
+        .div1 {
+            background-color: green;
+            border: 1px solid black;
+            width: 10%;
+        }
+        .div2 {
+            background-color: greenyellow;
+            border: 1px solid black;
+            width: 10%;
+
+        }
+        .div3 {
+            background-color: lightgreen;
+            border: 1px solid black;
+            width: 10%;
+
+        }
+        .div4 {
+            background-color: paleturquoise;
+            border: 1px solid black;
+            width: 10%;
+
+        }
+        .div5 {
+            background-color: turquoise;
+            border: 1px solid black;
+            width: 10%;
+
+        }
+        .div6 {
+            background-color: rgb(105, 103, 248);
+            border: 1px solid black;
+            width: 10%;
+
+        }
+        .div7 {
+            background-color: rgb(146, 51, 175);
+            border: 1px solid black;
+            width: 10%;
+
+        }
+    </style>
+</head>
+<body>
+    <!--static: valor por defecto, sigue el flujo normal.No se usa nada para indicar el desplazamiento.-->
+    <div class="container">
+        STATIC: valor por defecto, sigue el flujo normal
+        <div class="div1">before</div>
+        <div class="div1" style="position: static;">static</div>
+        <div class="div1">after</div>
+    </div>
+    <br>
+    <br>
+    <!--relative: mueve el elemento pero el espacio que ocupaba originalmente se preserva. 
+        Para indicar el desplazamiento se usa: left, right, top, bottom. Puede tomar valores 
+        de píxeles o porcentaje de desplazamiento para aplicar.-->
+    <div class="container">
+        RELATIVE: mueve el elemento pero el espacio que ocupaba originalmente se preserva.
+        <div class="div2">before</div>
+        <div class="div2" style="position: relative; left:25px; bottom: 10px">relative</div>
+        <div class="div2">after</div>
+    </div>
+    <br>
+    <br>
+    <!--absolute: el elemento mueve y no ocupa su espacio original, no interactúa con otros elementos. 
+        Su es especifica de manera relativa a su bloque contenedor (el ancestro que tenga una posición diferente a static. 
+        Si no hay ancestro de este tipo, será la raíz del documento. Normalmente, se indica el ancestro deseado con la posición
+        relativa "relative"). Para indicar el desplazamiento se usa: left, right, top, bottom. Puede tomar valores de píxeles o porcentaje de
+        desplazamiento para aplicar.-->
+    <div class="container">
+        ABSOLUTE: mueve el elemento y elimina el espacio que ocupaba antes. 
+        <div class="div4">before</div>
+        <div class="div4" style="position: absolute;top:305px; left:375px">absolute</div>
+        <div class="div4">after</div>
+    </div>
+    <br>
+    <br>
+    <!--fixed: similar a absolute pero la posición se especifica de manera relativa al area de renderizado del documento.
+        Para indicar el desplazamiento se usa: left, right, top, bottom. Puede tomar valores de píxeles o porcentaje de
+        desplazamiento para aplicar.-->
+    <div class="container">
+        FIXED
+        <div class="div3">before</div>
+        <div class="div3" style="position: fixed; top: 405px; left: 475px">fixed</div>
+        <div class="div3">after</div>
+    </div>
+    <br>
+    <br>
+    <!--z index: se indicar un valor entero, tomando ese valor como referencia para decidir que elemento se superpondrá a otro
+        en caso de que se solapen.  
+        Para indicar el desplazamiento se usa: left, right, top, bottom. Puede tomar valores de píxeles o porcentaje de
+        desplazamiento para aplicar. -->
+    <div class="container">
+        Z-INDEX
+        <div class="div5">before</div>
+        <div class="div5"style="position: fixed">fixed</div>
+        <div class="div5">after</div>
+    </div>
+    <br>
+    <br>
+    <!--visibility: -->
+    <div class="container">
+        VISIBILITY HIDDEN
+        <div class="div6" style="visibility: visible;">visible </div> <!--deja el elemento visible-->
+        <div class="div6" style="visibility: hidden;">hiden</div> <!--ocult el elemento pero deja el espacio que habría ocupado-->
+        <div class="div6" style="visibility: collapse;">colapse</div> <!--oculta el elemento y también el espacio que habría ocupado -->
+    </div>
+    <br>
+    <br>    
+        <!--float  -->
+    <div class="container">
+            FLOAT
+        <div class="div7" style="float: left; ">left(esto sería una piña) </div> <!---->
+        <div class="div7" style="float: right;">right y esto otra piña pero a la derecha</div>
+        <div class="div7" style="float: left;">left esto sería otra piña</div>
+    </div>
+</body>
+</html>

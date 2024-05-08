@@ -1,0 +1,57 @@
+    <!--primer cuadrado los 3 de dentro display in line el segundo los 3 dee dentro display in block y 
+        el tercero el cuadrado del medio display none -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        div{
+            margin: 10px;
+            width: 70px;
+            height: 50px;
+            background-color: aqua;
+        }
+        .divPri{
+            width: 500px;
+            height: 250px;
+            background-color: red ;
+        }
+        
+        /*Display en linea para el primer div*/
+        .divPri:first-child div{
+            display: inline-block;
+        }
+
+        /*Display en bloque para el segundo div*/
+        .divPri:nth-child(2) div{
+            display: block;
+        }
+
+        /*Display none para el tercer div*/
+        .abc{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="divPri">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="divPri">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="divPri">
+        <div></div>
+        <div class="abc"></div>
+        <div></div>
+    </div>       
+</body>
+</html>

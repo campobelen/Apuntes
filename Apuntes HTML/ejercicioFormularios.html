@@ -1,0 +1,110 @@
+<!-- formulario -->
+<!--label a cada imput placeholder 
+    nombre, apellidos, fecha nac ,tel, dni, paswword 
+    2 menus desplegables uno marca de coches y otro modelos
+    2 checkbox quieres asociarte...
+    2 radiobuton diferentes 
+    2 botones una de guardar y otro de reset
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+    <form>
+        <label for="nombre">Nombre: </label><br> <!--Poner texto antes del input-->
+        <input type="text" name="nombre" placeholder="Escriba su nombre"><br><br> <!--texto-->
+
+        <label for="apellidos">Apellidos: </label><br> 
+        <input type="text" name="nombre" placeholder="Escriba sus apellidos"><br><br> <!--texto-->
+        
+        <label for="fecha-nacimiento">Fecha nacimiento: </label><br>
+        <input type="date" name="fecha-nacimiento"><br><br> <!--input tipo calendario para escoger fecha-->
+
+        <label for="telefono">Teléfono: </label><br>
+        <input type="number" name="telefono" placeholder="Ingrese su teléfono"><br><br> <!--para números-->
+        
+        <label for="dni">Correo: </label><br>
+        <input type="text" name="dni" placeholder="Ingrese su dni"><br><br>
+
+        <label for="constraseña">Contraseña: </label><br> 
+        <input type="password" name="contraseña" placeholder="Ingrese su contraseña"><br><br><!--texto oculto-->    
+        <br>
+        <br>
+
+        <!--MENÚ DESPLEGABLE (marca de coche)-->
+        <label for="marca">Marca coche: </label>
+        <select name="marca"> 
+            <option value="renault">Renault</option>
+            <option value="toyota">Otro</option>
+        </select><br><br>
+
+        <!--MENÚ DESPLEGABLE (modelos)-->
+        <label for="modelo">Modelo: </label>
+        <select name="modelo"> 
+            <option value="Clio">Clio</option>
+            <option value="Captur">Captur</option>
+            <option value="Megane">Megane</option>
+        </select><br><br>
+                
+        <!-- EJEMPLO DE DESPLEGABLE CON OPTGROUP; condicionar segundo modelo para que aparezca según lo seleccionado en el 1º sin usar JS-->
+        <!--https://www.w3schools.com/tags/tag_optgroup.asp-->
+        <!--https://developer.mozilla.org/en-US/docs/Web/HTML/Element/optgroup-->      
+        <label for="coche">Elige una Marca de Coche:</label>
+        <select name="coche">
+            <optgroup label="Volvo">
+                <option value="S60">S60</option>
+                <option value="XC90">XC90</option>
+                <option value="V40">V40</option>
+            </optgroup>
+            <optgroup label="Saab">
+                <option value="9-3">9-3</option>
+                <option value="9-5">9-5</option>
+                <option value="900">900</option>
+            </optgroup>
+            <optgroup label="Fiat">
+                <option value="500">500</option>
+                <option value="Panda">Panda</option>
+                <option value="Tipo">Tipo</option>
+            </optgroup>
+            <optgroup label="Audi">
+                <option value="A3">A3</option>
+                <option value="A4">A4</option>
+                <option value="Q5">Q5</option>
+            </optgroup>
+        </select><br>
+        <br>
+        <br>
+
+        <!--CASILLAS DE VERIFICACIÓN (para marcar casilla)-->
+        <input type="checkbox" name="politica-compra" value="Acepto la política de compra">Acepto la política de compra <br>
+        <input type="checkbox" name="recibir-emails" value="Deseo recibir emails">Deseo recibir emails con ofertas comerciales<br>
+        <br>
+
+        <!--BOTONES RADIO-->
+        <input type="radio" name="sexo" value="hombre"> Hombre <br>
+        <input type="radio" name="sexo" value="mujer"> Mujer <br>
+        <input type="radio" name="sexo" value="otro"> Otro <br>
+        <input type="radio" name="sexo" value="prefiero-no-decirlo"> Prefiero no decirlo <br>
+        <br>
+
+        <span>¿Como nos has conocido?</span><br>
+        <input type="radio" name="web" value="web"> Publicidad en web <br>
+        <input type="radio" name="radio" value="radio"> Publicidad en la radio <br>
+        <input type="radio" name="conocido" value="conocido"> Recomendación de un conocido <br>
+        <input type="radio" name="redes" value="redes"> Redes sociales <br>
+        <input type="radio" name="otro" value="otro"> Prefiero no decirlo <br>
+        <br>
+        <br>
+
+        <!--BOTONES EN FORMULARIOS-->
+        <button type="submit">Enviar</button> <!--botón para enviar-->
+        <button type="reset">Cancelar</button> <!--botón para cancelar-->
+        
+    </form>  
+    </body>
+    </html>

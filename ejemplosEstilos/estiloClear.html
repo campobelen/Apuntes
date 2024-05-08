@@ -1,0 +1,49 @@
+<!--https://www.w3schools.com/css/css_float_clear.asp-->
+
+<!--La propiedad clear se aplica a un elemento cualquiera de tipo bloque y evita que elementos
+flotantes se coloquen a su izquierda, derecha o ambos (right, left, both)-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clear</title>
+<style>
+.div1 {
+  float: left;
+  padding: 10px;
+  border: 3px solid #73AD21;
+}
+.div2 {
+  padding: 10px;
+  border: 3px solid red;
+}
+
+
+.div3 {
+    padding: 10px;  
+    border: 3px solid #73AD21;
+    float: left;
+    clear: right;
+}
+.div4 {
+  padding: 10px;
+  width: 70%;
+  border: 3px solid red;
+  float: right;
+  clear:left;
+}
+</style>
+</head>
+<body>
+    <h2>Sin style clear</h2>
+    <div class="div1">DIV1</div>
+    <div class="div2">DIV2 - Notice that div2 is after div1 in the HTML code. However, since div1 floats to the left, the text in div2 flows around div1.</div>
+    <br>
+    <br>
+    <h2>Con style clear</h2>
+    <div class="div3">DIV3</div>
+    <div class="div4">DIV4 - "Clear:left" mueve el DIV4 hacia abajo below del div3 flotante. El valor "left" limpia los elementos flotados a la izquierda. Se puede también hacer clear "right" y "both".</div>
+</body>
+</html>
+
+

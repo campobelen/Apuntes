@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas</title>
+</head>
+<body>
+    <div>
+        <table>
+            <caption>DATOS DE ALUMNOS</caption> <!--TITULO DE TABLA-->
+            <tr> <!--fila-->
+                <th>NOMBRE</th> <!--encabezados-->
+                <th>APELLIDO</th> <!--encabezados-->
+                <th>NACIMIENTO</th> <!--encabezados-->
+                <th>TELEFONO</th> <!--encabezados-->
+                <th>DNI</th> <!--encabezados-->
+            </tr>
+            <tr> <!--fila-->
+                <td>Julia</td> <!--columna-->
+                <td>Fernández</td> <!--columna-->
+                <td>00-00-0000</td> <!--columna-->
+                <td>675 235 678</td> <!--columna-->
+                <td>00000000A</td> <!--columna-->
+            </tr>
+            <tr> <!--fila-->
+                <td>Paco</td> <!--columna-->
+                <td>López</td> <!--columna-->
+                <td>00-00-0000</td> <!--columna-->
+                <td>666 777 888</td> <!--columna-->
+                <td>22222222B</td> <!--columna-->
+            </tr>
+            <tr> <!--fila-->
+                <td>Eugenia</td> <!--columna-->
+                <td>Pérez</td> <!--columna-->
+                <td>00-00-0000</td> <!--columna-->
+                <td>666 777 888</td> <!--columna-->
+                <td>33333333C</td> <!--columna-->
+            </tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        <table>
+            <caption>CALCULADORA</caption> <!--TITULO DE TABLA-->
+            <tr> <!--fila-->
+                <td colspan="4">Resultado</td> <!--colspan= une columnas; rowspan= une filas-->
+            </tr>
+            <tr> <!--fila-->
+                <td>1</td> <!--columna-->
+                <td>2</td> <!--columna-->
+                <td>3</td> <!--columna-->
+                <td>+</td> <!--columna-->
+            </tr>
+            <tr> <!--fila-->
+                <td>4</td> <!--columna-->
+                <td>5</td> <!--columna-->
+                <td>6</td> <!--columna-->
+                <td>-</td> <!--columna-->
+            </tr>
+            <tr> <!--fila-->
+                <td>7</td> <!--columna-->
+                <td>8</td> <!--columna-->
+                <td>9</td> <!--columna-->
+                <td>*</td> <!--columna-->
+            </tr>
+            <tr> <!--fila-->
+                <td>0</td> <!--columna-->
+                <td colspan="2">=</td> <!--columna unida-->
+                <td>/</td> <!--columna-->
+            </tr>
+
+        </table>
+    </div>
+    <br>
+    
+    <div>
+        <table style="width:50%">
+            <caption>CALCULADORA EJEMPLO CLASE</caption>
+            <tr>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td rowspan="2" > + </td> 
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td rowspan="2" > - </td> 
+            </tr>
+            <tr>
+              <td colspan="3">0</td>
+            </tr>
+          </table>
+    </div>
+</body>
+</html>
