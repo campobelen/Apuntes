@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinanza</title>
+</head>
+<body>
+    <script>
+        /**
+         * Elige un numero para adivinar y guardarlo en una variable. Después usa "prompt" dentro del while para 
+         * preguntar hasta que el usuario adivine el numero correcto. 
+         * Se debe controlar cuando lo adivine, soltando un alert con un mensaje y se acabe el juego, y si se le da a 
+         * cancelar que tambien se acabe el juego 
+         * 
+         * PARA HACERLO CON Nº ALEATORIOS
+         * https://desarrolloweb.com/articulos/763.php
+         * */
+
+         let numCorrecto = 3;
+         let numIntroducido;
+                 
+         while(numIntroducido != numCorrecto && numIntroducido!== null){ //Ejecuta mientras no acierte el numero y la respuesta no sea null(cancelar equivale a null)
+            numIntroducido = prompt("Adivina, adivina...¿qué número del 1 al 10 estoy pensando? ");//input para introducir nº
+        } if (numIntroducido === null) { //al cancelar, entra null como respuesta
+            alert("Juego cancelado. Hasta la próxima!");
+        } else if (numIntroducido==numCorrecto){
+            alert("Enhorabuena!! Lo has adivinado, el número correcto es: " + numCorrecto);
+        } else {
+            alert("No es correcto, sigue intentandolo...");
+        }
+                     
+    </script>
+</body>
+</html>

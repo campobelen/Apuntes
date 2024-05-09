@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio variables</title>
+</head>
+<body>
+  <script>
+    //crea una variable nombre, asignale un valor e imprime por consola el typo de dato.
+    nombre = "belen"; //dice que es un tipo String
+
+    //despues cambia la variable a 20 y vuelve a imprimir por consola.
+    nombre = 20; //vuelve a decir que es de tipo String
+
+    //crea 2 variables mas num1 y num2 y una tercera variable resultado
+    var num1 = 5;
+    var num2 = 10;
+    var resultado;
+
+    //suma num1 y num2 y guardalo en la variable resultado
+    resultado = (num1 + num2);
+
+    //despues pinta por consola el resultado
+    console.log(resultado);
+    
+    //repite este proceso para la resta, la multiplicacion, la division y el modulo (resto de división)
+    resultado = (num1 - num2);
+    console.log(resultado);
+
+    resultado = (num1 * num2);
+    console.log(resultado);
+
+    resultado = (num1 / num2);
+    console.log(resultado);
+
+    resultado = (num1 % num2);
+    console.log(resultado);
+
+    //haz a x un incremento en 1 con el ++ y guardalo tambien en resultado
+    var x = 0;
+    resultado = (++x);
+    //ahora pinta por consola, "la variable num1 :" el valor "y la variable resultado vale" y el valor 
+    console.log("la variable x es: " + x + " y la variable resultado vale: " + resultado);
+
+    //repite lo mismo para el decremento 
+    resultado = (--x);
+    //ahora pinta por consola, "la variable num1 :" el valor "y la variable resultado vale" y el valor 
+    console.log("la variable x es: " + x + " y la variable resultado vale: " + resultado);
+
+    //repite el proceso para las comprobaciones igual num1 y num2, diferente, mayor que y menor que 
+    console.log(num1 == num2); // igual a
+    console.log(num1 != num2); // diferente a
+    console.log(num1 > num2); // mayor que
+    console.log(num1 < num2); // menor que
+
+
+    //prueba este codigo pintando con un alert, entre cada cambio un mensaje mas la variable num1
+    function autoincrementos() {
+      var x = 25;
+      alert("La variable 'x' es: " + x); //La variable 'x' es: 25
+
+      x += 5;
+      alert("La variable 'x' es: " + x);//La variable 'x' es: 30
+
+      x -= 5;
+      alert("La variable 'x' es: " + x);//La variable 'x' es: 25
+
+      x *= 2;
+      alert("La variable 'x' es: " + x);//La variable 'x' es: 50
+
+      x /= 2;
+      alert("La variable 'x' es: " + x);//La variable 'x' es: 25
+
+      x %= 3;
+      alert("La variable 'x' es: " + x);//La variable 'x' es: 1
+    }
+  </script>
+</body>
+</html>

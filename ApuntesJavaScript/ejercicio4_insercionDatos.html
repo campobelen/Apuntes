@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        Obtener la media de altura de 5 personas y su media de edad. 
+        Pediremos los datos mediante prompt
+    </p>
+    <script>
+
+    /*MI INTENTO DE MIERDER*/
+    /*let datoIntroducido;
+    let datoAlmacenado = []; 
+
+    for (let i = 0; i <5; i++) {
+        let datoIntroducido = prompt("Escribe a continuación tu altura. (Ejemplo: 156)");
+        datoAlmacenado = [datoIntroducido];
+    }*/
+
+    var sumAges = 0;
+    var sumaHeights = 0;
+    var counterAges= 0;
+    var counterHeights = 0;
+
+    for (let i = 0; i < 5; i++){
+        var age = parseInt(prompt("Introduce la edad:")); //ponemos un parse int para que coja el dato y los transforme en un número entero para poder operar con él.
+        var height = parseFloat(prompt("Introduce la altura:"));
+
+        sumAges += age; //con esto sumamos las edades introducidas
+        sumaHeights += height;
+
+        if(age > 18){
+            counterAges++;
+        }
+
+        if(height > 175){
+            counterHeights++;
+        }
+    }
+
+    document.write("La edad media es: " + sumAges/5);
+    document.write("La altura media es: " + sumaHeights/5);
+    document.write("El número de personas mayores de 18 años es: " + counterAges/5);
+    document.write("El número de personas que miden más de 175 es: " + counterHeights/5);
+
+
+
+    </script>
+</body>
+</html>
