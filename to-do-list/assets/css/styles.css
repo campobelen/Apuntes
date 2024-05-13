@@ -1,0 +1,53 @@
+* {
+    /*border: 1px solid black;*/
+    font-family: "Roboto", sans-serif;
+}
+
+.hidden{
+    display: none !important; /*oculta este elemento*/
+}
+
+header,
+main,
+#add-task-container,
+#lists-container{
+    display: flex;
+    justify-content: center;
+}
+
+#lists-container{
+    gap: 10px;
+}
+
+#to-do-container,
+#done-container{
+    display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+#to-do-container h2 {
+    color: rgb(233, 161, 7);
+}
+#done-container h2 {
+    color: rgb(54, 161, 72);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    margin: 5px;
+    position: relative;
+    gap: 10px;
+}
+
+main{
+    flex-direction: column;
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}

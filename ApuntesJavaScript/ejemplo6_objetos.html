@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function ScoreCar(brand, model){
+            this.brand = brand;
+            this.model = model;
+            this.speed = 0;
+            this.speedUp = function () {
+                this.speed += 5;
+            };
+            this.speedDown = function () {
+                this.speed -= 5;
+            };
+            this.toString = function () {
+                console.log("Mi" + this.brand + " " + this.model + " va a " + this.speed + " km/h" );
+            };
+        }
+        
+        var car = new ScoreCar("Citroen", "Xsara");
+        car.speedUp();
+        car.speedUp();
+        car.speedUp();
+        car.speedUp();
+        car.toString();
+        car.speedDown();
+        car.speedDown();
+        car.toString();
+    </script>
+</body>
+</html>

@@ -67,7 +67,7 @@ function sumar(x, y) {
 var resultado = sumar(5, 10);
 console.log(resultado); // el resultado sería 15
 
-/////////////////////////////////////ESTRUCTURAS DE CONTROL /////////////////////////////////////////////////////
+///////////////////////////////////// ESTRUCTURAS DE CONTROL /////////////////////////////////////////////////////
 
 //IF-ELSE ()
 let x = 10;
@@ -91,4 +91,127 @@ for (let i = 0; i < 5; i++) {
 }
 
 
+/////////////////////////////////////////////////////// EVENTOS ////////////////////////////////////////////////////////
 
+//Eventos del teclado:
+//onkeydown. Evento lanzado cuando una tecla es presionada.
+//onkeypress. Evento lanzado cuando una tecla es presionada y soltada.
+//onkeyup. Evento lanzado cuando una tecla es soltada.
+
+//Eventos del ratón
+//onclick. Evento lanzado cuando se realiza un click con el ratón.
+//ondblclick. Evento lanzado cuando se realiza un doble click con el ratón.
+//onmousedown. Evento lanzado cuando el botón del ratón es presionado.
+//onmousemove. Evento lanzado cuando el puntero del ratón se mueve.
+//onmouseout. Evento lanzado cuando el puntero del ratón sale del area del elemento.
+//onmouseover. Evento lanzado cuando el puntero del ratón pasa por encima del elemento.
+//onmouseup. Evento lanzado cuando el botón del ratón es soltado.
+
+/////////////////////////////////////////////////////// EXCEPCIONES ////////////////////////////////////////////////////////
+
+
+
+
+//////////////////////////////////////////////////// MÉTODOS PREDEFINIDOS /////////////////////////////////////////////////
+
+toUpperCase() //convierte a mayúsculas
+
+var texto = "hola mundo";
+var textoMayusculas = texto.toUpperCase();
+console.log(textoMayusculas); // resultado: "HOLA MUNDO"
+
+
+concat() //unir dos cadenas de texto
+
+var texto1 = "hola";
+var texto2 = "mundo";
+var textoUnido = texto1.concat(" ", texto2);
+console.log(textoUnido); // resultado: "hola mundo"
+
+push()//agregar un elemento al final de una array
+
+var numeros = [1, 2, 3];
+numeros.push(4);
+console.log(numeros); // resultado: [1, 2, 3, 4]
+
+pop()//eliminar el último elemento de una array
+
+var numeros = [1, 2, 3];
+numeros.pop();
+console.log(numeros); // resultado: [1, 2]
+
+Math.random() //genera un número aleatorio entre 0 y 1.
+
+var numeroAleatorio = Math.random();
+console.log(numeroAleatorio); // resultado: número aleatorio entre 0 y 1
+
+//Para obtener un número entero aleatorio comprendido entre dos dígitos (ambos incluidos), podemos utilizar la siguiente función:
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+//////////////////////////////////////////////////// OBJETOS /////////////////////////////////////////////////
+
+//Permiten agrupar valores y funciones relacionadas en una sola entidad. Se definen mediante la creación de una "class" o contructor que describe los atributos y métodos.
+//1º definimos el constructor:
+function NombreConstructor(atributo1,
+    atributo2) {
+    this.atributo1 = atributo1; //La palabra clave "this" se utiliza para hacer referencia al objeto que se está creando y asignar los valores de los atributos y la definición del método
+    this.atributo2 = atributo2;
+    this.metodo = function () {
+    console.log("Hola");
+    }
+}
+
+//2º creamos un objeto a partir del constructor. Creado el objeto, podemos acceder a su atributos y métodos.
+var objeto = new NombreConstructor(valor1, valor2);    
+
+//////////////////////////////////////////////////// POP-UPS Y ALERTAS /////////////////////////////////////////////////
+//Ventanas emergentes que aparecen en uan web. 
+
+//ventana emergente con mensaje y botón de aceptar. Habitualmente para mostrar mensaje de error o proporcionar información al usuario.
+alert("Ejemplo de ‘alert’ en JavaScript"); 
+
+//ventana emergente con mensaje y dos botones: aceptar y cancelar. Habitualmente para pedir una confiramción antes de una acción importante.
+if (confirm("Ejemplo de ‘confirm’ en JavaScript"))
+    {
+    // Código para la confirmación
+    } else {
+    // Código para la cancelación
+}
+
+
+//////////////////////////////////////////////////// FUNCIONES PREDEFINIDAS /////////////////////////////////////////////////
+
+//convierte un texto a número entero. Si no empieza por un número, devolverá NaN
+parseInt()
+
+let num1 = parseInt("123");
+console.log(num1); // Output: 123
+let noNum1 = parseInt("abc");
+console.log(noNum1); // Output: NaN
+
+//conviernte un texto a número decimal. 
+parseFloat()
+
+let num2 = parseFloat("3.14");
+console.log(num2); // Output: 3.14
+let noNum2 = parseFloat("abc");
+console.log(noNum2); // Output: NaN
+
+//determina si el valor es número o no. Si no es número, devuelve "true"
+isNaN()
+
+let num = 123;
+console.log(isNaN(num)); // Output: false
+let noNum = "abc";
+console.log(isNaN(noNum)); // Output: true
+
+//codifica una cadena como una URI valida
+encodeURI()
+
+let uri = "https://www.example.com/search?q=JavaScript tutorial";
+console.log(encodeURI(uri));
+// Output: https://www.example.com/search?q=JavaScript%20tutorial
+
+decodeURI()

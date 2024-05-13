@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="myLoadFunction()">    <!--EVENTO-->
+
+    <!--EVENTOS DE RATON-->
+    <h1 onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">Eventos de ratón</h1> 
+    
+    <!--EVENTOS DE TECLADO-->
+    <input style="width: 500px;" type="text" placeholder="Eventos de teclado (salen en la consola 😁 )"
+        onkeypress="keyPress()">
+
+    <script>
+
+        //EVENTOS DE RATON
+        function mouseOver(element) {
+            element.style.color = 'red';
+        }
+
+        function mouseOut(element) {
+            element.style.color = 'blue'
+        }
+
+
+        //EVENTOS DE TECLADO
+        function keyPress() {
+            console.log("He pulsado una tecla a las: " + new Date())
+        }
+
+        //EVENTO
+        function myLoadFunction() {
+            alert("Página cargada!!")
+        }
+
+
+    </script>
+</body>
+</html>
