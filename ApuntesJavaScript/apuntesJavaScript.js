@@ -210,8 +210,58 @@ console.log(isNaN(noNum)); // Output: true
 //codifica una cadena como una URI valida
 encodeURI()
 
-let uri = "https://www.example.com/search?q=JavaScript tutorial";
-console.log(encodeURI(uri));
+let uri1 = "https://www.example.com/search?q=JavaScript tutorial";
+console.log(encodeURI(uri1));
 // Output: https://www.example.com/search?q=JavaScript%20tutorial
 
+//decodifica una cadena de texto codificada con encodeURI().
 decodeURI()
+
+let uri2 = "https://www.example.com/search?q=JavaScript%20tutorial";
+console.log(decodeURI(uri2)); // Output: https://www.example.com/search?q=JavaScript tutorial
+
+//////////////////////////////////////////////////// DOM /////////////////////////////////////////////////
+
+
+//////////////////////////////////////////////////// FECHAS /////////////////////////////////////////////////
+//Se crea una instancia del objeto Date
+
+var fechaActual = new Date(); //Fecha actual
+var fechaEspecifica = new Date(2023, 4, 15, 12, 30, 0, 0); //Fecha específica (año, mes, día, hora, minuto, segundo, milisegundo)
+
+var fecha = new Date();
+
+//Obetener componente individual (utilizando los métodos del objeto Date):
+var año = fecha.getFullYear();
+var mes = fecha.getMonth();
+var día = fecha.getDate();
+var hora = fecha.getHours();
+var minuto = fecha.getMinutes();
+var segundo = fecha.getSeconds();
+
+//Formatear fecha:
+var fechaCompleta = fecha.toLocaleString(); //Formato localizado de fecha y hora 
+var fechaISO = fecha.toISOString(); //Formato ISO 8601
+var fechaPersonalizada = fecha.toLocaleDateString('es-ES', {weekday: 'longo', year: 'numeric', month: 'long', day:'numeric'}); //Formato personalizado
+
+//Operaciones con fechas:
+
+fecha.setDate(fecha.getDate() + 5); //Sumar 5 días a la fecha actual
+fecha.setMonth(fecha.getMonth() - 1); //Restar 1 mes a la fecha actual
+fecha.setFullYear(fecha.getFullYear() + 2); //Sumar 2 años a la fecha actual
+
+//Comparación de fechas (empleando <,>,= o los )
+var fecha1 = new Date ('2022-01-01');
+var fecha2 = new Date ('2023-01-01');
+
+if (fecha1 < fecha2) {
+    console.log("La fecha1 es anterior a la fecha2");
+} else if (fecha1 > fecha2) {
+    console.log("La fecha1 es posterior a la fecha2");
+} else {
+    console.log("La fecha1 y la fechas2 son iguales");
+} //Console.log imprimirá "La fecha1 es anterior a la fecha2"
+
+//////////////////////////////////////////////////// EXPRESIONES REGULARES /////////////////////////////////////////////////
+
+
