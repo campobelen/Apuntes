@@ -13,10 +13,22 @@ main,
 #lists-container{
     display: flex;
     justify-content: center;
+    color: #CC8800;
+    gap: 5px;
 }
 
-#lists-container{
-    gap: 10px;
+#add-task-input,
+#add-task-btn{
+    border: #fdd88f ;
+    border-radius: 5px;
+    margin: 1px;
+    background-color: #cc880081;
+    color: white;
+}
+
+
+body{
+    background-color: #ffedc8b9;
 }
 
 #to-do-container,
@@ -24,13 +36,19 @@ main,
     display: flex; /*https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
     flex-direction: column;
     flex-grow: 1;
+    background-color: #fdd88f96 ;
+    border-radius: 5px;
+    margin: 10px;
+
 }
 
 #to-do-container h2 {
-    color: rgb(233, 161, 7);
+    color: #976501;
+    margin: 10px;
 }
 #done-container h2 {
-    color: rgb(54, 161, 72);
+    color: #b1760054;
+    margin: 10px;
 }
 
 .task {
@@ -50,4 +68,5 @@ footer{
     position: absolute;
     bottom: 0;
     right: 0;
+    color: #976501;
 }

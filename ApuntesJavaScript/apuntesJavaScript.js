@@ -128,11 +128,13 @@ var texto2 = "mundo";
 var textoUnido = texto1.concat(" ", texto2);
 console.log(textoUnido); // resultado: "hola mundo"
 
+
 push()//agregar un elemento al final de una array
 
 var numeros = [1, 2, 3];
 numeros.push(4);
 console.log(numeros); // resultado: [1, 2, 3, 4]
+
 
 pop()//eliminar el último elemento de una array
 
@@ -140,10 +142,12 @@ var numeros = [1, 2, 3];
 numeros.pop();
 console.log(numeros); // resultado: [1, 2]
 
+
 Math.random() //genera un número aleatorio entre 0 y 1.
 
 var numeroAleatorio = Math.random();
 console.log(numeroAleatorio); // resultado: número aleatorio entre 0 y 1
+
 
 //Para obtener un número entero aleatorio comprendido entre dos dígitos (ambos incluidos), podemos utilizar la siguiente función:
 function getRandom(min, max) {
